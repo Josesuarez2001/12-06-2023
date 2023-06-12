@@ -1,0 +1,95 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12/06/2023</title>
+</head>
+<style>
+body{
+    width: 530px; 
+    height: 530px; 
+    margin:0;
+    padding:0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+ 
+}
+
+.heart {
+    height: 250px;
+    width: 250px;
+    background-color:red;
+    position: relative;
+    transform: rotate(45deg);
+    box-shadow: -30px  30px 250px #f20044;
+    animation: palpitar 0.5s linear infinite alternate;
+    
+}
+.contenido {
+     position: fixed;
+     margin-bottom: 50px;
+     text-align: center;
+     animation: palpitar 0.5s center infinite alternate;
+     
+}
+h1 {
+    color: white
+}
+h2 { color : white
+}
+h3 { color : white
+}
+h4 { color : white
+}
+
+@keyframes palpitar{
+    0%{
+        transform: rotate(45deg) scale(1.10);
+    }
+    80%{
+        transform: rotate(45deg) scale(1.0);
+    }
+    100%{
+        transform: rotate(45deg) scale(0.8);
+    } 
+}
+.heart::before{
+    content: "";
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    background: red;
+    top: -50%;
+    border-radius: 50%;
+    box-shadow: 20px  30px 250px #f20044;
+}
+.heart::after{
+    content: "";
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    background: red;
+    right: 50%;
+    border-radius: 50%;
+    box-shadow: 30px  30px 250px #f20044;
+}
+
+</style>
+<body background="playa.jpg" >
+  
+    <div class="heart"></div>
+
+    <div class="contenido"><h1>Te Amo Mi Princesa</h1><h2>Felices 06 Meses  </h2><h3>Eres Mi Vida</h3><h4>Eres Mi Felicidad </h4></div>
+
+  
+      
+</body>
+</html>
